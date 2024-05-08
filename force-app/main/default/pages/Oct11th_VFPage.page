@@ -1,0 +1,35 @@
+<apex:page >
+    <html>
+        <head>
+            <style type="text/css">
+                #divid{
+                color:green;
+                font-size:20px;
+                font-style:san serif;
+                border:5px solid maroon;
+                display:inline-block;
+                margin-left:400px;
+                }
+                #pid{
+                border: red 5px solid;
+                padding:10px
+                
+                }
+            </style>
+            
+        </head>
+        <body>
+            <div id="divid">
+                <center style="color:green;font_style:Arial">This is the first div in Visualforce Page.</center>
+            </div>
+            <p id="pid">
+                <b>Cognizant</b> Limited is a leading global information technology, consulting and business process services company. 
+                We harness the power of cognitive computing, hyper-automation, robotics, cloud, analytics and emerging technologies
+                to help our clients adapt to the digital world and make them successful. A company recognized globally for its comprehensive
+                portfolio of services, strong commitment to sustainability and good corporate citizenship, we have over 200,000 dedicated 
+                employees serving clients across six continents. Together, we discover ideas and connect the dots to build a better and 
+                a bold new future.
+            </p>
+        </body>
+    </html>
+</apex:page>

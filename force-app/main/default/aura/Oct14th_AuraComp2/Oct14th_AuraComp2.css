@@ -1,0 +1,23 @@
+.THIS.container {
+    margin:20px 20px auto 20px;
+    
+}
+.THIS .header{
+    font-weight:bold;
+    text-align:center;
+    font-size:20px;
+    color: green;
+    border: solid 2px red;
+    margin-left:450px;
+    margin-right:450px;
+    margin-bottom:40px;
+    background-color:rgba(120,100,150,0.5);
+}
+.THIS .maindiv{
+    max-width:75%;
+    
+}
+.THIS .btn{
+    margin-top:20px;
+    float:right;
+}

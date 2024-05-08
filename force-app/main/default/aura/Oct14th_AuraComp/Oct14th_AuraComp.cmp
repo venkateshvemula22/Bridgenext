@@ -1,0 +1,53 @@
+<aura:component controller="Oct14th_ApexCls" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes"
+                access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="acobjList" type="account[]" default="[]" />
+    
+    <div class="container">
+        <table  class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+            <thead>
+                <tr class="slds-line-height_reset">
+                    <th class="" scope="col">
+                        <div class="slds-truncate">Account ID</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate">Account Name</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate">Site</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate">Industry</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate">Rating</div>
+                    </th>
+                </tr>
+            </thead>
+            <aura:iteration items="{!v.acobjList}" var="acc" >
+                <tbody>
+                    <tr class="slds-hint-parent">
+                        <td>
+                            <div class="slds-truncate">{!acc.Id}</div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate">{!acc.Name}</div>
+                        </td>
+                        <td >
+                            <div class="slds-truncate">{!acc.Site}</div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate">{!acc.Industry}</div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate">{!acc.Rating}</div>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </aura:iteration>
+            
+        </table>
+        
+    </div>
+</aura:component>

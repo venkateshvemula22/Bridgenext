@@ -1,0 +1,24 @@
+<template>
+
+    <b><h2 class="slds-align_absolute-center">My Family Details</h2></b><br>
+
+    <div  class="maindiv">
+        
+        <lightning-input label="SurName" value={SurName} placeholder="sur name"></lightning-input><br>
+        <lightning-input label="Name" value={Name}></lightning-input><br>
+        <lightning-input label="Wife" value={Wife}></lightning-input><br>
+        <lightning-input label="Mother" value={Mother}></lightning-input><br>
+        <lightning-input label="Father" value={Father}></lightning-input><br>
+        <lightning-input label="Son" value={Son}></lightning-input><br><br>
+        <div>{Name}</div>
+        
+    </div>
+    <div class="jsbutton ">
+
+        <lightning-button data-dataa="firstbutton" label="call JS" variant="brand" onclick={invokeJS} class="slds-m-left_x-small" ></lightning-button> &nbsp; &nbsp;
+        <lightning-button label="call JS 2" variant="brand" onclick={invokeJS2} class="slds-m-left_x-small" ></lightning-button>
+    </div><br><br>
+
+    <p>{finaltext}</p>
+    
+</template>

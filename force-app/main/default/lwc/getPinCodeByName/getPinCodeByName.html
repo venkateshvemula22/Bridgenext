@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Post Office details" icon-name="standard:account">
+        <lightning-input class="slds-m-around_medium" name="Name" label="Enter Pincode" value={cityName}></lightning-input>
+        <lightning-button class="slds-p-right_x-small" label="Find Post Offices" slot="actions" onclick={handleClick}></lightning-button>
+        <template if:true={result}>
+            <div class="maindiv">
+                <div class="slds-m-around_medium">
+                    <p class="slds-align_absolute-center">status message is : {message}</p>
+                </div>
+            </div>
+        </template>
+        <template for:each={postOfficeList} for:item="post">
+                <div class="slds-m-around_medium" key={post.Name}>
+                    {post.Name}
+                </div>
+        </template>
+    <template if:true={errorMessage}>
+        <div class="maindiv">
+            <div class="slds-m-around_medium">
+                <p class="slds-align_absolute-center">{errorMessage}</p>
+            </div>
+        </div>
+    </template>
+    </lightning-card>
+</template>

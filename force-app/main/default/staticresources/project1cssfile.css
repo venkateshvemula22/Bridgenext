@@ -1,0 +1,18 @@
+body {
+    background:#42455a;
+}
+
+.container{
+    height: 100%;
+    width:100%;
+}
+.menu ul{
+    display: inline-flex;
+    margin:50px;
+}
+.menu ul li{
+   list-style: none;
+   margin:0 20px;
+   color:#b2b1b1;
+   cursor: pointer;
+}

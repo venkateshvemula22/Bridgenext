@@ -1,0 +1,15 @@
+h2{
+    text-align: center;
+    color: red;
+    
+}
+.maindiv{
+    border: 2px solid green;
+    text-align: center;
+    padding-top: 50px;
+    align-items: center;
+    
+}
+span{
+    color: green;
+}

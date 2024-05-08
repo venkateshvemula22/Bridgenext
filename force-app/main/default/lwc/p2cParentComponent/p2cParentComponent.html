@@ -1,0 +1,37 @@
+<template>
+    <div class="slds-m-around_medium">
+            <!--Alert Child component Receiving primitive data-->
+        <lightning-card title="Alert Child component Receiving primitive data">
+            <c-p2c-alert-component
+            message="I received the mesage from my parent component"
+            number=20
+            is-valid=false
+            ></c-p2c-alert-component>
+        </lightning-card>
+        <div class="slds-m-bottom_medium"></div>
+
+        <!--Carousel Child Component Receiving non primitive data-->
+        <lightning-card title="Carousel Child Component Receiving non primitive data">
+            <c-p2c-carousel-component carousel-details={carouselData}></c-p2c-carousel-component>
+        </lightning-card>
+        <div class="slds-m-bottom_medium"></div>
+
+        <!--Progress child component on action at parent-->
+        <lightning-card title="Progress child component on action at parent">
+            
+                <lightning-input type="number" label="Enter Progress" onkeyup={handleInputChange}></lightning-input>
+                <c-p2c-progress-component progress-value={val}></c-p2c-progress-component>
+            
+        </lightning-card>
+        <div class="slds-m-bottom_medium"></div>
+
+        <!--Slider child component calling child method from parent-->
+        <lightning-card title="Slider child component calling child method from parent">
+            
+            <lightning-button label="Reset Slider" variant="brand" onclick={handleClick}></lightning-button>
+            <c-p2c-slider-component></c-p2c-slider-component>
+        
+        </lightning-card>
+    
+    </div> 
+</template>

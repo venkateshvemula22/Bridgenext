@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Followers" icon-name="standard:account">
+        <lightning-button class="slds-p-right_x-small" label="Follow" slot="actions" onclick={handleFollowUnfollow} disabled={isFollowDisabled}></lightning-button>
+        <lightning-button label="Unfollow" slot="actions" onclick={handleFollowUnfollow} disabled={isUnfollowDisabled}></lightning-button>
+        <div class="maindiv">
+           <template if:true={isRunningUserFollowing}>
+              <div class="slds-m-around_medium child_div1">
+                  <p class="slds-align_absolute-center">You are following this account</p>
+              </div>
+            </template>
+            <div class="slds-m-around_medium">
+                <p class="slds-align_absolute-center">{displyMsg}</p>
+            </div>
+        </div>
+    </lightning-card>
+</template>

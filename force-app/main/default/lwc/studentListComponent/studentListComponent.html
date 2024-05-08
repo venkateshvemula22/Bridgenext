@@ -1,0 +1,23 @@
+<template>
+    <h2>Inputs Query Records</h2>
+    <lightning-input label={objectName} value={selectedCity} minlength="1" > 
+    </lightning-input>
+    <lightning-input label={soqlQuery} value={selectedCity} minlength="1" > 
+    </lightning-input>
+    <lightning-button variant="brand" label="Submit" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+    <lightning-card title="Students List" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+            <template if:true={stdList}>
+                <lightning-datatable
+                    key-field="Id"
+                    data={stdList} 
+                    columns={columns}>
+                </lightning-datatable>
+            </template>
+            <template if:true={error}>
+                {error} 
+                <!-- handle Apex error -->
+            </template>
+        </div>
+    </lightning-card>
+</template>

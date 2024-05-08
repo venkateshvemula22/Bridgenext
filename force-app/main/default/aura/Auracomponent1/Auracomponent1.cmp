@@ -1,0 +1,198 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <html>
+        <head style="background-color:lightgreen"> 
+            <title> Article on Ragiv Khel Ratna</title>
+        </head>
+        <body>
+            <h1 style="font-size:40px;color:#40ff00"><center style="border:15px black double">Learning Basics of HTML Code</center></h1>
+            <hr/>
+            <p><table style="width:50%;" border="auto" >
+                <th style="color:green;"><b>First Name</b></th>
+                <th style="color:green;"><b>Last Name</b></th>
+                <th style="color:green;"><b>Relation</b></th>
+                <tr>
+                    <td style="color:red;">Venkatesh</td>
+                    <td style="color:blue;">Vemula</td>
+                    <td style="color:maroon;">Son</td>
+                </tr>
+                <tr>
+                    <td style="color:red;">Satyam</td>
+                    <td style="color:blue;">Vemula</td>
+                    <td style="color:maroon;">Father</td>
+                </tr>
+                <tr>
+                    <td style="color:red;">Lalitha</td>
+                    <td style="color:blue;">Vemula</td>
+                    <td style="color:maroon;">Mother</td>
+                </tr>
+                </table>
+            </p>
+            <button type="Submit" onclick="blank" >submit</button>
+            <h2 style = "color:brown;">Rajiv Gandhi Khel Ratna Award renamed Major Dhyan Chand Khel Ratna Award</h2>
+            <p>NEW DELHI:<div><b style = "color:green;">The Khel Ratna Award</b> will now be known as <b style = "color:red;"><a href = "https://en.wikipedia.org/wiki/Dhyan_Chand">Major Dhyan Chand Khel Ratna Award</a></b>, <b style = "color:green;"><a href = "https://www.pmindia.gov.in/en/">Prime Minister Narendra Modi</a></b> announced on Friday.
+                The Khel Ratna award is the highest sporting honour in the nation. It was officially known as Rajiv Gandhi Khel Ratna Award in Sports and Games.
+                READ ALSO</div></p>
+            <p><i><b>Rajiv Gandhi Khel Ratna Award renamed Major Dhyan Chand Khel Ratna Award</b></i></p>
+            <div>
+                <p>This is para inside div</p>
+                <div>This is div insid div</div>
+                <span><div>this is div inside of a span which is inside of div</div></span>
+                <p><div><b><i>this is bold div inside para which is inside div</i></b></div></p>
+            </div>
+            <p>nadith is howle</p>
+            <h1>Some random text</h1>
+            <p>
+                <b>Khel Ratna named after Major Dhyan Chand:</b> Things to know about the hockey legend
+                Prime Minister Narendra Modi on Friday announced his government's decision to rename the Khel Ratna award- the highest sporting honour of the nation - after Major Dhyan Chand. Here are the key things to know about Dhyan Chand.
+                <b><i>Khel Ratna named after Major Dhyan Chand:</i></b> Things to know about the hockey legend
+                <b>"Major Dhyan Chand was among India’s foremost sportspersons who brought honour and pride for India. It is fitting that our nation’s highest sporting honour will be named after him,"</b> said Modi in a tweet.
+                He further said he had been getting lot of requests from citizens across India to name the Khel Ratna Award after Major Dhyan Chand.
+                "Respecting their sentiment, the Khel Ratna Award will hereby be called the Major Dhyan Chand Khel Ratna Award," the PM said
+                The government's decision comes a day after Indian men's hockey team ended the 41-year wait for an Olympic medal when it defeated Germany 5-4 and secured first hockey medal for the country since the Moscow Olympics in 1980.
+                The women's hockey team too performed admirably and just missed out on a medal when it lost to Great Britain 3-4 and finished 4th earlier in the day.
+                Some of the recipients of the award in the past include, Virat Kohli, hockey legend Sardar Singh, Sania Mirza, MS Dhoni, Vishwanath Anand, Dhanraj Pillay and Sachin Tendulkar. The prestigious award carries a prize money of Rs 25 lakh.
+                Major Dhyan Chand is regarded as one of the greatest players to ever play the sport. He was a central part of the team that brought India three Olympic gold medals from 1928 to 1936. He was honoured with the Padma Bhushan in 1956 and his birthday on 29 August is celebrated as National Sports Day in India every year.
+                
+            </p>
+            <div>
+                <center><h2>Baisc Html Table element</h2>
+                    <table style= "width:50%" border="4">             
+                        <tr>
+                            <th>S.No</th>
+                            <th>First Name</th>
+                            <th> Last Nmae</th>
+                            <th>Accuracy</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Venkatesh</td>
+                            <td>Vemula</td>
+                            <td>90</td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td>Karnakar</td>
+                            <td>Purmani</td>
+                            <td>95</td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <td>Durga Prasad</td>
+                            <td> Yeema</td>
+                            <td>100</td>
+                        </tr>
+                    </table>
+                </center>
+            </div>
+            <hr/>
+            <h1 style="color:green;">About botton tag element</h1>
+            <button type="button" onclick= "alert('Hello World')">Submit</button>
+            <hr/>
+            
+            <center>
+                <h2 color="green">Educational Details</h2>
+                <table border= "8">
+                    <th>S,No</th>
+                    <th>Course</th>
+                    <th>Passed out Year</th>
+                    <th>Percentage</th>
+                    <th>Institute</th>
+                    <th>Place</th>
+                    <tr>
+                        <th>1</th>
+                        <td>Engineering</td>
+                        <td>2016</td>
+                        <td>65%</td>
+                        <td>ACE EBGINEERING COLLEGE</td>
+                        <td>Hyderabad</td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td>Intermediate</td>
+                        <td>2012</td>
+                        <td>95%</td>
+                        <td>SHIVANI JUNIOR COLLEGE</td>
+                        <td>HANAMKONDA</td>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <td>SSC</td>
+                        <td>2010</td>
+                        <td>85%</td>
+                        <td>ZPSS VS Lakhmipuram</td>
+                        <td>VS Lakhmipuram</td>
+                    </tr>
+                </table>
+            </center>
+            
+            <hr/>
+            <h1> About the select Element</h1>
+            <label for="names">select a name:</label><br/>
+            <select name= "names" id="numbers">
+                <option value="1">venkatesh</option>
+                <option value="2">naveen</option>
+                <option value="3">karthik</option>
+                <option value="4">prashanth</option>
+                <option value="5">nivas</option>
+            </select>
+            <hr/>
+            <h1>About dl, dt, dd elements</h1>
+            <dl>
+                <dt>course</dt>
+                <dd>SFDC</dd>
+                <dd>data science</dd>
+                <dd>Devops</dd>
+                <dd>power BI</dd>
+                <div>
+                    <dt>Students</dt>
+                    <dd>venkatesh</dd>
+                    <dd>naveen</dd>
+                    <dd>karthik</dd>
+                    <dd>prashant</dd>
+                </div>
+            </dl>
+            <hr/>
+            <div>
+                <h1>About Iframe Element</h1>
+                <iframe src= "https://www.vlrtraining.in/salesforce-online-training/" title="VLR Institute" height= "500" width="1000" >
+                    
+                </iframe>
+            </div>
+            <hr/>
+            <div>
+                <img src="https://i.ytimg.com/vi/BHACKCNDMW8/maxresdefault.jpg" alt="Relationships" width="200" height="200"><center><b>Image1</b></center></img><hr/>                       
+                <img src="https://5.imimg.com/data5/IX/TS/MY-64355810/nature-scenery-painting-500x500.jpg" alt= "Pictorial representation of Relationships" width="250" height="200"><center><b>Image2</b></center></img>
+            </div>
+            <hr/>
+            <div>
+                <h2>input tag element</h2>
+                <label for="fname"><b style="color:red;">First Name:</b></label>
+                <input type="text" id="fname" border="20"></input><br/>
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname"></input><br/>
+                <label for="date">Date:</label>
+                <input type="date" id="date"></input><br/>
+                <label for="fee">Is fee paid?:</label>
+                <input type="checkbox" id="fee"></input><br/>
+                <input type="button" value="submit"></input><br/>
+                <hr/>
+                <label for="email">Email:</label><br/>
+                <input type="email" id="email"></input><br/>
+                <label for="password">Password:</label><br/>
+                <input type="password" id="password"></input><br/>
+                <input type="submit" value="Login"></input><br/>  
+            </div>
+            <hr/>
+            <div> 
+                <h1>The output element</h1>
+                
+                <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+                    <input type="range" id="a" value="50"></input>
+                    +<input type="number" id="b" value="25"></input>
+                        =<output name="x" for="a b"></output>
+                        </form>
+                        
+                    </div>
+                </body>
+            </html>
+        </aura:component>

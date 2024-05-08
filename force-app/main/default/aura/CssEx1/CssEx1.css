@@ -1,0 +1,35 @@
+.THIS #div1{
+    color:white;
+    font-size:20px;
+    margin-bottom:30px;
+    
+}
+.THIS .header1{
+    background-color:blue;
+    border:3px black solid;
+    border-radius:30px;
+    margin:auto;
+    padding:20px;
+    text-align:center;
+    width:600px;
+    
+}
+.THIS .div2{
+   background-color:rgba(45,26,89,0.1);
+    color:red;
+    font-size:20px;
+    margin-top:20px;
+}
+.THIS #para1{
+    color:blue;
+}
+.THIS #span1{
+    font-size:25px;
+    color:green;
+}
+.THIS a:hover{
+    color:red;
+    font-size:30px;
+    transition:1s;	
+    
+}

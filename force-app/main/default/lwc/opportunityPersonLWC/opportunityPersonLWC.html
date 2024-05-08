@@ -1,0 +1,76 @@
+<template>
+	<lightning-card>
+		<lightning-spinner if:true={isSpinner} variant="brand" size="large"> </lightning-spinner>
+		<table class="slds-table slds-table_cell-buffer slds-table_bordered slds-border_left slds-border_right"
+			aria-labelledby="element-with-table-label other-element-with-table-label">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Adhar Number</th>
+					<th>PAN Number</th>
+					<th>Date Of Birth</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+					<th>
+						<lightning-button label="Add" icon-name="utility:add" onclick={handleAddRow}></lightning-button>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<template for:each={oppPersonsList} for:item="Data" for:index="index">
+					<tr key={Data.Id}>
+						<!-- <td>
+                            <lightning-record-edit-form
+                                        record-id={recordId}
+                                        object-api-name="Opportunity_Station__c">
+                                <lightning-input-field field-name="Name" data-index={index} variant="label-hidden"
+								onchange={handleChange} value={Data.Station__c} disabled={Data.Id}></lightning-input-field>
+                            </lightning-record-edit-form>
+						</td>  -->
+						<td>
+							<lightning-input type="text" name="Name" data-index={index} variant="label-hidden"
+								onchange={handleChange} value={Data.Name}>
+							</lightning-input>
+						</td>
+						<td>
+							<lightning-input type="text" name="Adhar_Number__c" data-index={index} variant="label-hidden"
+								onchange={handleChange} value={Data.Adhar_Number__c}>
+							</lightning-input>
+						</td>
+						<td>
+							<lightning-input type="text" name="PAN_Card_Number__c" data-index={index} value={Data.PAN_Card_Number__c}
+								variant="label-hidden" onchange={handleChange}>
+							</lightning-input>
+						</td>
+                        <td>
+							<lightning-input type="Date" name="Date_Of_Birth__c" data-index={index} value={Data.Date_Of_Birth__c}
+								variant="label-hidden" onchange={handleChange}>
+							</lightning-input>
+						</td>
+                        <td>
+							<lightning-input type="Phone" name="Phone__c" data-index={index} value={Data.Phone__c}
+								variant="label-hidden" onchange={handleChange}>
+							</lightning-input>
+						</td>
+                        <td>
+							<lightning-input type="Email" name="Email__c" data-index={index} value={Data.Email__c}
+								variant="label-hidden" onchange={handleChange}>
+							</lightning-input>
+						</td>
+						<td>
+							<lightning-button-icon data-index={index} class="slds-float--right" icon-name="action:new"
+								onclick={handleAddRow}>
+                            </lightning-button-icon>
+							<lightning-button-icon data-index={index} class="slds-float--right"
+								icon-name="action:delete" onclick={handleRemoveRow}>
+                            </lightning-button-icon>
+						</td>
+					</tr>
+				</template>
+			</tbody>
+		</table>
+		<br>
+		<lightning-button variant="brand" label="Save" onclick={saveRows} class="slds-align_absolute-center">
+		</lightning-button>
+	</lightning-card>
+</template>

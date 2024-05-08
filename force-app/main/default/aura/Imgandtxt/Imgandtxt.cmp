@@ -1,0 +1,16 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <ltng:require styles="{!$Resource.Imgandtext}"/>
+    <body>
+        <div class="container">
+            <img src="https://vlrcom3-dev-ed--c.visualforce.com/resource/1629547305000/image1" alt="image"/>
+                <div class="content">
+                    <h3>Windows-left</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias quidem adipisci maxime consequatur enim, cum perferendis consequuntur ratione sequi hic!</p>
+                </div>
+                <div class="content2">
+                    <h3>Windows-right</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quisquam eveniet magni quibusdam dolores nam quam porro sequi placeat fuga?</p>
+                </div>
+            </div>   
+        </body>                                                    
+</aura:component>

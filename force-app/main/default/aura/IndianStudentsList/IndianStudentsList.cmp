@@ -1,0 +1,53 @@
+<aura:component controller="StudentsList" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="indianStudentsList" type="student__c[]" default="[]" />
+    
+    <div>
+        <table  class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+            <thead>
+                <tr class="slds-line-height_reset">
+                    <th class="" scope="col">
+                        <div class="slds-truncate">STUDENT NAME</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate">PENDING FEE</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate">RECORD TYPE</div>
+                    </th>
+                </tr>
+            </thead>
+            <aura:iteration items="{!v.indianStudentsList}" var="std" >
+                <tbody>
+                    <tr class="slds-hint-parent">
+                        <td>
+                            <div class="slds-truncate">{!std.Name}</div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate">{!std.Pending_fee_is__c}</div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate">{!std.RecordType.Name}</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </aura:iteration>
+            
+        </table>
+        
+    </div>
+    
+    
+    <!-- <aura:attribute name="data" type="Object"/>
+    <aura:attribute name="columns" type="List"/>
+    
+    <div style="height: 300px">
+        <lightning:datatable
+                keyField="id"
+                data="{! v.data }"
+                columns="{! v.columns }"
+                hideCheckboxColumn="true"/>
+    </div>  -->
+    
+    
+</aura:component>

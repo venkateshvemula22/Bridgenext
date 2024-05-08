@@ -1,0 +1,12 @@
+<template>
+    <h2 >Paas arguments to Apex from html input</h2><br><br><br><br>
+
+       <div><b>{nameText}</b>{datatext}</div><br><br>
+       <div><b>{errorTxt}</b>{errortext}</div><br><br>
+
+       <lightning-input data-inp="searchKey" label="Enter strvalue to pass to apex" type="text" onchange={invokeJSC} ></lightning-input>
+       <lightning-input data-inp2="searchKey" label="Enter number" type="number" onchange={invokeJSCt} ></lightning-input>
+      <!-- <lightning-button label="Submit" variant="brand" onclick={invokeJS} > </lightning-button> -->
+
+    
+</template>

@@ -1,0 +1,26 @@
+<template>
+    <lightning-card class="slds-m-around_medium" title="PubSub Subscriber">
+        <template if:true={stdList} >
+            <template if:true={RecordType}>
+                    <div>Student Type : <b>{RecordType}</b></div>
+            </template>
+            <template if:true={length}>
+                <div>Total Records : <b>{length}</b></div>
+        </template>
+            <table border="1px">
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Pending Fee</th>
+                            <th>Record Type</th>
+                        </tr>
+                <template for:each={stdList} for:item="st">
+                    <tr key={st.id}>
+                        <td>{st.Name}</td>
+                        <td>{st.Pending_fee_is__c}</td>
+                        <td>{st.RecordType.Name}</td>
+                    </tr>
+                </template>
+            </table>
+        </template>
+    </lightning-card>
+</template>

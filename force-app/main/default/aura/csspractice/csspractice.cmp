@@ -1,0 +1,13 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<section class="venky">
+        <div id="naveen">
+        <h2>this is first header</h2>
+        <p>this is the paragraph for the first header in the section</p>
+        </div>
+        <div>
+          <h2>this is second header</h2>
+            <p>this  is paragraph for the second header in the section</p>
+        </div>
+    
+    </section>
+</aura:component>

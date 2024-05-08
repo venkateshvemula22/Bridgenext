@@ -1,0 +1,45 @@
+<aura:component 
+                implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" 
+                access="global"
+                controller="Oct14th_Apexcls2" >
+    <aura:attribute name="accRec" type="Account" default="{}" />
+    <aura:attribute name="resp" type="string" default="" />
+    <div class="container">
+        <div class="header slds-align_absolute-center">
+            <p>New Account Record</p>
+        </div>
+        <div style="color:red" class="slds-align_absolute-center">{!v.resp}</div>
+        <div class="slds-align_absolute-center">
+            <lightning:icon iconName="utility:adduser" size="large" />
+        </div>
+        
+        <div class="maindiv slds-box slds-grid slds-wrap slds-gutters slds-align_absolute-center">
+            <div class="slds-col slds-size_1-of-2">
+                <lightning:input label="Account Name:" value="{!v.accRec.Name}" type="" />
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning:input label="Account Site:" value="{!v.accRec.Site}" type="" />
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning:input label="Account Industry:" value="{!v.accRec.Industry}" type="" />
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning:input label="Account Rating:" value="{!v.accRec.Rating}" type="" />
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning:input label="Billing City:" value="{!v.accRec.BillingCity}" type="" />
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning:input label="Billing Street:" value="{!v.accRec.BillingStreet}" type="" />
+            </div>
+            <div class="btn">
+                <lightning:button label="Save" variant="brand" onclick="{!c.myAction}" />
+                <lightning:button label="Clear All" variant="brand" onclick="{!c.resetme}" />           
+            </div>
+            
+        </div>
+    </div>
+    
+    <div>{!v.accRec.Name}</div>
+    
+</aura:component>

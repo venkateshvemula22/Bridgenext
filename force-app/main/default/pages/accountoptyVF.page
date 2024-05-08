@@ -1,0 +1,79 @@
+<apex:page controller="AccountOpportunityDetailsController" renderAs="pdf" showHeader="false" standardStylesheets="false" applyHtmlTag="false">
+    <html>
+        <head>
+            <style type="text/css">
+                .container {
+                    width: 100%;
+                    max-width: 800px;
+                    margin: 0 auto;
+                    font-family: Arial, sans-serif;
+                    font-style: italic;
+                }
+                .title {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 24px;
+                }
+                .label {
+                    
+                    font-size: 15px;
+                }
+                .table {
+                    border-collapse: collapse;
+                    width: 100%;
+                }
+                .table td, .table th {
+                    border: 1px solid black;
+                    padding: 5px;
+                }
+                .table th {
+                    background-color: lightgray;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <div class="title">Account Details</div>
+                <table class="table">
+                    <tr>
+                        <td class="label">Name:</td>
+                        <td>{!account.Name}</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Industry:</td>
+                        <td>{!account.Industry}</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Phone:</td>
+                        <td>{!account.Phone}</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Closed-Won Amount:</td>
+                        <td>${!ClosedWonAmount}</td>
+                    </tr>
+                </table>
+                <div class="title">Opportunity Details</div>
+                <apex:repeat value="{!opportunities}" var="opp">
+                    <table class="table">
+                        <tr>
+                            <th colspan="2">{!opp.Name}</th>
+                        </tr>
+                        <tr>
+                            <td class="label">Stage:</td>
+                            <td>{!opp.StageName}</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Amount:</td>
+                            <td>${!opp.Amount}</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Close Date:</td>
+                            <td>{!opp.CloseDate}</td>
+                        </tr>
+                    </table>
+                    <br />
+                </apex:repeat>
+            </div>
+        </body>
+    </html>
+</apex:page>

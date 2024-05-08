@@ -1,0 +1,41 @@
+.THIS body{
+    position:absolute;
+    background-color:rgb(102,105,150,0.5);
+    text-align:center;
+}
+.THIS#maindiv {
+    position:relative;
+    margin:auto;
+    border:solid 3px black;
+    padding:10px;
+    width:60%;
+    
+}
+.THIS#header1{
+    position:relative;
+    text-align:center;
+    color:green;
+    font-size:20px;
+    font-size:san serif;
+    font-family:bold;
+    border:2px solid red;
+    margin:10px auto;
+    width:20%;
+    background-color:grey;
+    	
+}
+.THIS#second_div{
+    text-align:center;
+    margin-top:10px;
+    margin-bottom:50px;
+    
+}
+.THIS.subdiv{
+    margin:auto;
+    width:45%;
+     color:green;   
+}
+.THIS.slds-col{
+    display:flex-box;
+    box-shadow:0 10px 10px black;
+}

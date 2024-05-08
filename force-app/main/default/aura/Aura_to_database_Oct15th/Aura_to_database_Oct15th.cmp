@@ -1,0 +1,39 @@
+<aura:component 
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" 
+                controller="Oct15th_Aura_to_database"
+                >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="orgresp" type="Account[]" default="[]" />
+    <aura:attribute name="resultstatus" type="string" default="" />
+    <aura:attribute name="AcCount" type="integer" default="" />
+    <div class="maincontainer" >
+        <div class="slds-align_absolute-center slds-box">
+            <lightning:button label="Save" variant="brand" onclick="{!c.Savedfunc}" />
+        </div>
+        <div class="status">
+            <p><h1>{!v.AcCount}</h1></p>
+        </div>
+        <div class="status">
+            <p><h1>{!v.resultstatus}</h1></p>
+        </div>
+        
+        <table border="3" class="secndcon">
+            <tr>
+                <th>Account Id</th>
+                <th>Name</th>
+                <th>Site</th>
+                <th>Industry</th>
+            </tr>
+            <aura:iteration items="{!v.orgresp}" var="ac" >
+                <tr>
+                    <td> <lightning:formattedtext value="{!ac.Id}" /> </td>
+                    <td> <lightning:input value="{!ac.Name}" /> </td>
+                    <td> <lightning:input value="{!ac.Site}" /> </td>
+                    <td> <lightning:input value="{!ac.Industry}" /> </td>
+                </tr>
+            </aura:iteration>
+        </table>
+    </div>
+    
+    
+</aura:component>

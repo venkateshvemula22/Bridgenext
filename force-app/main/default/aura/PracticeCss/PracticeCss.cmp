@@ -1,0 +1,21 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <ltng:require styles="{!$Resource.project1cssfile}"/>
+    <body>
+        <div class="container">
+            <div class="menu">
+                <ul>   
+                    <li>Home</li>
+                    <li>Services</li>
+                    <li>Product</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+        <div class="slds-align_absolute-center nandu" style="height:10rem; color:red;">this is to check the CSS frameworks predefined slds classes in salesforce</div>
+    <div class="slds-border_bottom slds-align_absolute-center" style="margin-bottom:20px;">this should have a  bottom border</div>
+        </div>
+        <div class="venky" style="margin: 50px;text-align: center;
+    padding: 20px;">third div for media checking media outputs </div>
+        </body>
+</aura:component>

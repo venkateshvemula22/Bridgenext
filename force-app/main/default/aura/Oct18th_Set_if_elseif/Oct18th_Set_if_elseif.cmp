@@ -1,0 +1,27 @@
+<aura:component 
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <!--<aura:handler name="JsIfelse" value="{!this}" action="{!c.doInit}" /> -->
+    
+    <aura:attribute name="isDisplay" type="boolean" default="" />
+    <aura:attribute name="aurabtn" type="boolean" default="" />
+    <aura:attribute name="sfdcbtn" type="boolean" default="" />
+    <div class="firstdiv">
+        <h1>Salesforce Training</h1>
+    </div>
+    <div class="container slds-box">
+        <div class="cls">
+            <aura:if isTrue="{!v.isDisplay}">
+                <lightning:input name="" type="text" value="Aura Training" label="Aura Name" />
+                <lightning:input name="" type="numner" value="200" label="Size" />
+                <aura:set attribute="else" >
+                    <lightning:input name="" type="text" value="SFDC Training" label="SFDC Name" />
+                    <lightning:input name="" type="numner" value="300" label="Size" />
+                </aura:set>
+            </aura:if>
+        </div>
+        <div class="subdiv">
+            <lightning:button variant="brand" onclick="{!c.auradisplayaction}" label="Aura-Display" disabled="{!v.aurabtn}" />
+            <lightning:button variant="brand" onclick="{!c.sfdcdisplayaction}" label="SFDC-Display" disabled="{!v.sfdcbtn}"  />
+        </div>
+    </div>
+</aura:component>

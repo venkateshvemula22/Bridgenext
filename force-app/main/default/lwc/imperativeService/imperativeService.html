@@ -1,0 +1,20 @@
+<template>
+    <lightning-input label="Enter text" type="text" onchange={handleChange} ></lightning-input>
+    <!-- <lightning-button label="Clik It" variant="brand" onclick={handleClick} ></lightning-button> -->
+
+    <template if:true={opptys}>
+
+        <template for:each={opptys} for:item="opt">
+            <div key={opt.Id}>
+                {opt.Id} - {opt.Name} - <span style="color:red">{opt.StageName}</span>
+            </div>
+
+        </template>
+
+    </template>
+
+    <template if:true={errormsg}>
+        {errormsg}
+    </template>
+    
+</template>

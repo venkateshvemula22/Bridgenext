@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Accounts Followed by You">
+        <lightning-datatable
+            key-field="Id"
+            data={data}
+            columns={columns}
+            onrowaction={handleRowAction}
+            sorted-direction={sortedDirection}
+            sorted-by={sortedBy}
+            onsort={handleSort}
+            selected-rows={selectedRows}
+            show-row-number-column
+            show-row-actions
+        ></lightning-datatable>
+        <lightning-button label="Set Account Owner" onclick={handleSetAccountOwner} disabled={isButtonDisabled}></lightning-button>
+    </lightning-card>
+</template>

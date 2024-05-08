@@ -1,0 +1,31 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="stdName" type="string" default="Venkatesh Vemula" />
+    <aura:attribute name="batchSize" type="integer" default="124" />
+    <aura:attribute name="TodayDate" type="Date" default="2021-10-15" required="true" />
+    <aura:attribute name="TodayTime" type="datetime" default="2021-10-10" required="true" />
+    <aura:attribute name="Fees" type="decimal" default="16000.50" required="true" />
+    <aura:attribute name="IsFeepaid" type="boolean" default="true" required="true" />
+    <aura:attribute name="Howmuch" type="double" default="8106267957" required="true" />
+    <aura:attribute name="actionValue" type="string" default="Submit" />
+    
+    
+    <div class="slds-box slds-m-top_large slds-grid slds-grid_vertical">
+        <span class="slds-col"><b>studentName :</b><br/> {!v.stdName}</span><br/>
+        <span class="slds-col"><b>batchSize :</b><br/> {!v.batchSize}</span><br/>
+        <span class="slds-col"><b>todayDate :</b><br/> {!v.TodayDate}</span><br/>
+        <span class="slds-col"><b>todayTime :</b><br/> {!v.TodayTime}</span><br/>
+        <span class="slds-col"><b>totalFee :</b><br/> {!v.Fees}</span><br/>
+        <span  class="slds-col"><b>isFeepaid? :</b><br/> {!v.IsFeepaid}</span>
+        
+    </div>
+    <div class="container">
+        <span><lightning:input label="Joining date:"  type="Date" value="{!v.TodayDate}" /></span><br/>
+        <span><lightning:input label="Joining date/Time:"  type="DateTime" value="{!v.TodayTime}" /></span><br/>
+        <span><lightning:input label="Student Name:" type="string" value="{!v.stdName}" palceholder="Student Name:" /></span><br/>
+        <span><lightning:input label="batch size:" type="string" value="{!v.batchSize}" palceholder="Batch Size:" /></span><br/>
+        <span><lightning:input label="Fees:" type="decimal" value="{!v.Fees}" palceholder="Fee amount" /></span><br/>
+        <span><lightning:input label="IsFeepaid?:" type="checkbox" value="{!v.IsFeepaid}" checked="true" /></span><br/>
+        <span><lightning:input label="IsFeepaid?:" type="checkbox-button" value="{!v.IsFeepaid}" checked="true" /></span><br/>
+        <lightning:button label="{!v.actionValue}" variant="brand"/>
+    </div>
+</aura:component>

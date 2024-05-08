@@ -1,0 +1,26 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <body> 
+        <div id="div1">
+            <h1 class="header1">This is the first header in the div element</h1>
+            <div class="div2">As Taliban fighters swarmed Kabul, two friends looked for the fastest route out:<br/>
+                <p id= "para1">   (CNN)Zahra shelters in her Kabul apartment, anxiously peering through the window at Taliban fighters in the parking lot below. She hasn't dared to leave her house for days.
+                    
+                    Only two weeks ago, she and her friend Sara were drinking and laughing at a party in Kabul. The Taliban were approaching -- but a return to their repressive rule still seemed far away.
+                    In the days since the Taliban retook Kabul on August 15, plunging Afghanistan's capital into chaos, thousands of women like Zahra and Sara have faced the harrowing decision -- to stay or to go.
+                    CNN is using aliases for the friends for their own safety, and that of their families, who are in Kabul and vulnerable to reprisals from Taliban fighters after the US decision to withdraw its troops.
+                    Although the Taliban have pledged a more moderate and "inclusive" government, many fear the same brutal regime of two decades ago, when women were forced to stay at home, banned from school and work.
+                    Millions of Afghans face an uncertain future, but for women the risks are extreme. Staying could mean a life of veiled subservience. Attempting to flee could end in death on Kabul's volatile streets -- or freedom with the risk of never seeing their families again.</p></div>
+        </div>
+        <hr/>
+        <div>
+            <span id="span1">Khel Ratna named after Major Dhyan Chand:</span><br/> Things to know about the hockey legend
+            <a href="https://en.wikipedia.org/wiki/Dhyan_Chand" target="blank">"Major Dhyan Chand</a> was among India’s foremost sportspersons who brought honour and pride for India. It is fitting that our nation’s highest sporting honour will be named after him," said Modi in a tweet.
+            He further said he had been getting lot of requests from citizens across India to name the Khel Ratna Award after Major Dhyan Chand.
+            "Respecting their sentiment, the Khel Ratna Award will hereby be called the Major Dhyan Chand Khel Ratna Award," the PM said
+            The government's decision comes a day after Indian men's hockey team ended the 41-year wait for an Olympic medal when it defeated Germany 5-4 and secured first hockey medal for the country since the Moscow Olympics in 1980.
+            The women's hockey team too performed admirably and just missed out on a medal when it lost to Great Britain 3-4 and finished 4th earlier in the day.
+            Some of the recipients of the award in the past include, Virat Kohli, hockey legend Sardar Singh, Sania Mirza, MS Dhoni, Vishwanath Anand, Dhanraj Pillay and Sachin Tendulkar. The prestigious award carries a prize money of Rs 25 lakh.
+            Major Dhyan Chand is regarded as one of the greatest players to ever play the sport. He was a central part of the team that brought India three Olympic gold medals from 1928 to 1936. He was honoured with the Padma Bhushan in 1956 and his birthday on 29 August is celebrated as National Sports Day in India every year
+        </div>
+    </body>
+</aura:component>

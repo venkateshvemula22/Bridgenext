@@ -1,0 +1,6 @@
+.THIS body{
+    background-color:grey;
+}
+.THIS .container img{
+    transform:scale(1.2,1.2);
+}

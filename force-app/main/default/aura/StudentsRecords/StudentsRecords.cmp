@@ -1,0 +1,57 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" 
+                controller="DisplayStudentRecords"
+                access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}" />
+    <aura:attribute name="StudentList" type="student__c[]" default="[]" />
+    <div class="header">
+        <h1>STUDENT LIST</h1>
+    </div>
+    <div class="container">
+        <table  class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+            <thead>
+                <tr class="slds-line-height_reset">
+                    <th class="" scope="col">
+                        <div class="slds-truncate">Roll Number</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate">Student Name</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate">Email Address</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate">Phone Number</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate">Course</div>
+                    </th>
+                </tr>
+            </thead>
+            <aura:iteration items="{!v.StudentList}" var="Std" >
+                <tbody>
+                    <tr class="slds-hint-parent">
+                        <td>
+                            <div class="slds-truncate">{!Std.Roll_Number_del__c}</div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate">{!Std.Name}</div>
+                        </td>
+                        <td >
+                            <div class="slds-truncate">{!Std.student_email__c}</div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate">{!Std.student_phone__c}</div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate">{!Std.Course__r.Name}</div>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </aura:iteration>
+            
+        </table>
+        
+    </div>
+	
+</aura:component>

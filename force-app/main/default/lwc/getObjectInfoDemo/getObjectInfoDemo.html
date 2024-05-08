@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Account Info">
+        <div class="slds-p-around_medium">
+            <template if:true={objInfo}>
+                <p>defaultRecordTypeId : {objInfo.defaultRecordTypeId}</p>
+                <p>apiName : {objInfo.apiName}</p>
+                <p>labelPlural : {objInfo.labelPlural}</p>
+            </template>
+        </div>
+    </lightning-card><br>
+    <!--List of Fields of a searched object-->
+    <lightning-card title="Account Field Info">
+        <lightning-input class="slds-p-around_medium" label="Object" type="text" value={objectName} onkeyup={handleInput}></lightning-input>
+        <lightning-datatable
+            key-field="apiName"
+            data={fields}
+            columns={columns}
+        ></lightning-datatable>
+    </lightning-card>
+</template>

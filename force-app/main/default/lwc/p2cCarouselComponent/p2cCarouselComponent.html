@@ -1,0 +1,16 @@
+<template>
+        <template if:true={carouselDetails}>
+            <div class="slds-m-around_medium">
+                <lightning-carousel>
+                    <template for:each={carouselDetails} for:item="item">
+                        <lightning-carousel-image
+                                key={item.header}
+                                src={item.src}
+                                header={item.header}
+                                description={item.description}
+                        ></lightning-carousel-image>
+                    </template>
+                </lightning-carousel>
+            </div>
+        </template>
+</template>

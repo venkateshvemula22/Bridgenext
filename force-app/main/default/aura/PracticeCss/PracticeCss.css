@@ -1,0 +1,45 @@
+.THIS.venky {
+    background-color:rgb(200,150,0,0.5);
+    height:1000px;
+    width:800px;
+    position:absolute;
+}
+.THIS #naveen{
+    height:50px;
+    width:600px;
+    box-shadow:0 0 10px black;
+    border:solid 5px red;
+    margin:20px;
+    border-radius:15px 0 15px 0;
+    background-color:limegreen;
+    position:sticky;
+    top:0;      
+}
+.THIS .nandu{
+    height:50px;
+    width:600px;
+    box-shadow:0 0 10px black;
+    border:solid 5px gradient;
+    border-radius:15px 0 15px 0;
+    background-color:teal;
+    position:sticky;
+    top:0;
+    
+}
+.THIS.slds-align_absolute-center{
+    font-size:100px;
+    color:red;
+}
+@media only screen and (max-device-width:375px){
+.THIS .venky{
+  font-size: 80px;
+    color:green;
+        border:5px solid red;
+    }}
+@media only screen and (min-device-width:376px) and (max-device-width:1350px){
+    .THIS .nandu{
+        font-size: 50px;
+        display:inline-flex;        
+         
+    }
+}

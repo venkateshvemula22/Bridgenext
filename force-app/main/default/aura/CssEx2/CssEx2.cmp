@@ -1,0 +1,44 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    
+    <h1><center>Learning about inline CSS Styles</center></h1>
+    <p style="border:3px solid green;width:50%;margin:20px;padding:20px;">this is the first para in this CssEx2 component<span style="border:solid 3px orange;margin:10px;padding:5px">this is span inside the first para</span></p>
+    <div style="border:3px solid black;width:50%;margin:20px;padding:20px;">this is the first div in this component<span style="border:solid 3px red;margin:10px;padding:5px;">this is span inside the first para</span></div>
+    <br/>
+    <br/>
+    <br/>
+    <aura:html tag="style">
+        div{
+        background-color:#ccff99;
+        border:3px solid #99004d;
+        margin-top:20px;
+        margin-left:25px;
+        margin-bottom:50px;
+        padding:20px;
+        width:75%;
+        }
+        span{
+        background-color:#80bfff;
+        color:red;
+        border:dashed 2px #006633;
+        margin-left:50px;
+        padding:5px;
+        }
+        a{
+        border:3px solid #660044;
+        background-color:#4d79ff;
+        padding:2px;
+        margin:50px 300px 60px 300px;
+        color:#ff0000;
+        
+        }
+    </aura:html>    
+    <h1><center>Learning about Internal CSS styles by element selector</center></h1>
+    
+    <div>this div is to check the internal css style<span>this is the span inside the second div to check the internal css styles</span></div>
+    <center><a href="https://login.salesforce.com/" target="blank"><b>ALL THE BEST TO ALL!!!!!!!!!!</b></a></center>
+    
+    
+    
+    
+    
+</aura:component>

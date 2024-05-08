@@ -1,0 +1,6 @@
+<template>
+    <lightning-card title="Accounts" icon-name="standard:account" >
+        <lightning-button label="Refresh" onclick={handleclick} variant='base' slot="actions"></lightning-button>
+        <c-accounts-list-child-component account-data={accounts}></c-accounts-list-child-component>
+    </lightning-card>
+</template>

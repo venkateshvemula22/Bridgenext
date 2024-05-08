@@ -1,0 +1,10 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/> 
+    
+    <p><b style="color:red">Emtec</b> is an IT consultancy dedicated to helping our clients drive transformation and growth by employing the 
+        latest technologies and processes to empower their employees, accelerate innovation and deliver amazing client 
+        experiences. Our “Client for Life” approach is built upon over 20 years of delivering true value. Emtec’s 
+        multi-decade client relationships demonstrate our commitment to being a long-term partner to our clients. 
+        Emtec’s offerings include Advisory, Integration and Managed Services for Packaged, Custom, Mobile and Cloud 
+        Applications, as well as a variety of Analytics and Infrastructure Services.</p>
+</aura:component>

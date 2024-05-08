@@ -1,0 +1,6 @@
+<aura:component implements="force:appHostable" >
+    <div>This is the first aura component from starting of the lightninng aura component class</div>
+    <p><a href="https://www.w3schools.com" style="color:red" target="newtab">W3schools</a>Note that the offset is not necessarily the leftmost character in the returned String or the first character following the ellipses, 
+        <div>but it appears somewhere in the result.  Regardless, abbreviate won’t</div> return a String of length greater than maxWidth.If maxWidth is 
+        too small, this method throws a run-time exception.</p>
+</aura:component>

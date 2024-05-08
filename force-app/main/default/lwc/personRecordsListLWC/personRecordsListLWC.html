@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Persons List" icon-name="standard:contact" >
+        <lightning-button label="Refresh" onclick={handleclick} variant='base' slot="actions"></lightning-button>
+        <template if:true={personsList} >
+            <lightning-datatable
+                    key-field="Id"
+                    data={personsList}
+                    columns={columns}
+                    draft-values={draftValues}
+                    onsave={handleInlineEditSave}
+                    hide-checkbox-column 
+                    show-row-number-column
+                    sorted-direction={sortDirection}
+                    sorted-by={sortedBy}
+                    onsort={onHandleSort}
+                    onrowaction={handleRowAction}>
+                    
+            </lightning-datatable>
+        </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,61 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <h1 id="header1">Number Input tag practice</h1>
+    <div id="maindiv">
+        <div class="subdiv">
+            <lightning:icon class="slds-align_absolute-center" iconName="standard:user" />
+        </div>
+        <lightning:input type="text" name="input1" label="First Name" value="Venkatesh" placeholder="Enter First Name"/>
+        <lightning:input type="text" name="input2" label="Last Name" value="" placeholder="Enter Last Name" required="true"/>
+        <lightning:input type="number" name="input3" label="Account Number" value="" placeholder="Enter Account Number" required="true"/>
+        <lightning:input type="number" name="input4" label="Read-only number field" value="101273470445" readonly="true"/>
+        <lightning:input type="number" name="input4" label="Disabled number field" value="" disabled="true"/>
+        <lightning:input type="number" name="input4" label="Number field with percentage formatter" value="" formatter="percent" step="0.01"/>
+        <lightning:input type="number" name="input4" label="Number field with currency formatter" value="" formatter="currency" step="0.01"/>
+        <lightning:input type="number" name="input4" label="Number field with max value" value="" max="500"/>
+    </div>
+    <div id="second_div">
+        <lightning:button variant="success" label="Submit" onclick="{! c.handleClick }"/>
+        <lightning:button variant="success" label="Download" iconName="utility:download" iconposition="left"/>
+        <lightning:button variant="brand" label="Edit" iconName="utility:edit" iconposition="left"/>
+        <lightning:button variant="destructive" label="Delete" iconName="utility:delete" iconposition="left"/>
+    </div>
+    
+    <div class="slds-grid">
+  <div class="slds-col">
+    <span>1</span>
+  </div>
+  <div class="slds-col">
+    <span>2</span>
+  </div>
+  <div class="slds-col">
+    <span>3</span>
+  </div>
+  <div class="slds-col">
+    <span>4</span>
+  </div>
+  <div class="slds-col">
+    <span>5</span>
+  </div>
+  <div class="slds-col">
+    <span>6</span>
+  </div>
+  <div class="slds-col">
+    <span>7</span>
+  </div>
+  <div class="slds-col">
+    <span>8</span>
+  </div>
+  <div class="slds-col">
+    <span>9</span>
+  </div>
+  <div class="slds-col">
+    <span>10</span>
+  </div>
+  <div class="slds-col">
+    <span>11</span>
+  </div>
+  <div class="slds-col">
+    <span>12</span>
+  </div>
+</div>
+</aura:component>

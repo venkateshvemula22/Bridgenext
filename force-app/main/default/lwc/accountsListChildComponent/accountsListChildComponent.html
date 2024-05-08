@@ -1,0 +1,9 @@
+<template>
+        <template if:true={accountData} >
+            <lightning-datatable
+                    key-field="Id"
+                    data={accountData}
+                    columns={columns}>
+            </lightning-datatable>
+        </template>
+</template>

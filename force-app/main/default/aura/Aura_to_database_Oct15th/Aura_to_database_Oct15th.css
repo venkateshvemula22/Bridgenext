@@ -1,0 +1,12 @@
+.THIS.maincontainer .secndcon{
+    max-width:60%;
+    margin-left:20px;
+    margin-top:25px;
+    border:3px green solid;
+    
+}
+.THIS .status{
+    color:red;
+    font-size:20px;
+    
+}

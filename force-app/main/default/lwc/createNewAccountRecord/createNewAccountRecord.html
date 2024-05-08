@@ -1,0 +1,38 @@
+<template>
+    <lightning-layout multiple-rows class="mainclass">
+        <lightning-layout-item size="12">
+
+            <lightning-input label="Account Name" type="text" value="" data-inp1="accName"> </lightning-input>
+
+        </lightning-layout-item>
+        <lightning-layout-item size="12">
+
+            <lightning-input label="Site" type="text" value="" data-inp2="site"> </lightning-input>
+            
+        </lightning-layout-item>
+        <lightning-layout-item size="12">
+
+            <lightning-input label="Industry" type="text" value="" data-inp3="industry"> </lightning-input>
+            
+        </lightning-layout-item>
+        <lightning-layout-item size="12">
+
+            <lightning-button label="Add Account" variant="brand" onclick={addAccountRecord} ></lightning-button>
+            <lightning-button label="Create Account" variant="brand" onclick={saveAccountRecords} ></lightning-button>
+            
+        </lightning-layout-item>
+
+        <lightning-layout-item size="12">
+
+            <template if:true={showMessage}>
+                <div>The below list of accounts are inserted...</div>
+                <div>{showMessage}</div>
+            </template>
+            <template if:true={errorMessage}>
+                <div>{errorMessage}</div>
+            </template>
+            
+        </lightning-layout-item>
+    </lightning-layout>
+    
+</template>

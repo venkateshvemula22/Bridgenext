@@ -1,0 +1,19 @@
+<template>
+    <div class="main">
+            <h2><b> Example to pass an argument to apex method from Ui and display records</b></h2>
+
+            <lightning-input label="Enter Name" type="text" onchange={invokeJS} ></lightning-input>
+
+            <div>
+                <template if:true={myaccount.data}>
+                        {myaccount.data.Id} - {myaccount.data.Name}
+                </template>
+            </div>
+
+            <div>
+                <template if:true={myaccount.error}>
+                    {myaccount.error.body.message}
+                </template>
+            </div>
+    </div>
+</template>

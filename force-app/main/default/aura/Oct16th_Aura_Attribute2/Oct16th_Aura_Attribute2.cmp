@@ -1,0 +1,41 @@
+<!--attributes examples using prim and non-prim like string,integer,list,object,sObject etc...-->
+
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="stdName" type="string" default="VENKATESH" />    
+    <div><b>stdName : </b><br/>{!v.stdName}</div>
+    <div>Below example is for button groups<br/>
+        <lightning:buttongroup title="Group of Actions">
+            <lightning:button label="Refresh" variant="brand" />
+            <lightning:button label="Edit" variant="brand" />
+            <lightning:button label="Save" variant="brand" />
+            <lightning:button label="Delete" variant="brand" disabled="true" />
+        </lightning:buttongroup>
+    </div>
+    <aura:attribute name="strname" type="string[]" default="['raju','gaju','buju','aaju','seeju']" />
+    <div class="slds-box ddd">
+        <aura:iteration items="{!v.strname}" var="na" >
+            <span><b>student_Name == {!na}</b></span><br/>
+        </aura:iteration>
+    </div>
+    <aura:attribute name="strNumber" type="integer[]" default="[1,5,3,8,4,6,9,7,21,12]" />
+    <div class="slds-box container">
+        <aura:iteration items="{!v.strNumber}" var="num">
+            <span><b>strNumber : {!num}</b></span><br/>
+        </aura:iteration>
+    </div>
+    
+    <aura:attribute name="isFeePaid" type="boolean[]" default="[true,false,true,false,true,false]" />
+    <div class="slds-box container">
+        <aura:iteration items="{!v.isFeePaid}" var="bool">
+            <span><b>isFeePaid? : {!bool}</b></span><br/>
+        </aura:iteration>
+    </div>
+    
+    <aura:attribute name="acc" type="Account" default="{'name':'venkatesh','site':'Hyderabad','Industry':'Agriculture'}" />
+    <div class="slds-box container">
+        <span><b>Account_Name : </b></span>{!v.acc.name}<br/>
+        <span><b>Account_Site : </b></span>{!v.acc.site}<br/>
+        <span><b>Account_Industry : </b></span>{!v.acc.Industry}<br/>
+    </div>
+    
+</aura:component>

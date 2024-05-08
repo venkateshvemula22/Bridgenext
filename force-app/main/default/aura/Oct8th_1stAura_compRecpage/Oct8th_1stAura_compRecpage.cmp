@@ -1,0 +1,4 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <p>This is the second aura component for adding this component to course object record page</p>
+    <div><a href="https://www.w3schools.com/tags/tag_div.asp" style="color:red" target = "newtab">this is the div</a></div>	
+</aura:component>

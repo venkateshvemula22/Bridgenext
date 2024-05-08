@@ -1,0 +1,63 @@
+<template>
+	<lightning-card>
+		<lightning-spinner if:true={isSpinner} variant="brand" size="large"> </lightning-spinner>
+		<table class="slds-table slds-table_cell-buffer slds-table_bordered slds-border_left slds-border_right"
+			aria-labelledby="element-with-table-label other-element-with-table-label">
+			<thead>
+				<tr>
+					<th>Account</th>
+					<th>Contact</th>
+					<th>Country</th>
+					<th>Course Fee</th>
+                    <th>IsFee Paid</th>
+					<th>
+						<lightning-button label="Add" icon-name="utility:add" onclick={handleAddRow}></lightning-button>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<template for:each={studentList} for:item="Data" for:index="index">
+					<tr key={Data.Id}>
+						<td>
+                            <lightning-record-edit-form
+                                        record-id={recordId}
+                                        object-api-name="Account">
+                                <lightning-input-field field-name="Account__c" data-index={index} variant="label-hidden"
+								onchange={handleChange} value={Data.Account__r.Name} disabled={Data.Id}></lightning-input-field>
+                            </lightning-record-edit-form>
+						</td>
+						<td>
+							<lightning-input type="text" name="Contact__c" data-index={index} variant="label-hidden"
+								onchange={handleChange} value={Data.Contact__c}>
+							</lightning-input>
+						</td>
+						<td>
+							<lightning-input type="text" name="Country__c" data-index={index} variant="label-hidden"
+								onchange={handleChange} value={Data.Country__c}>
+							</lightning-input>
+						</td>
+						<td>
+							<lightning-input type="text" name="course_fees__c" data-index={index} value={Data.course_fees__c}
+								variant="label-hidden" onchange={handleChange}>
+							</lightning-input>
+						</td>
+                        <td>
+							<lightning-input type="CheckBox" name="Is_Fee_Paid__c" data-index={index} value={Data.Is_Fee_Paid__c}
+								variant="label-hidden" onchange={handleChange}>
+							</lightning-input>
+						</td>
+						<td>
+							<lightning-button-icon data-index={index} class="slds-float--right" icon-name="action:new"
+								onclick={handleAddRow}></lightning-button-icon>
+							<lightning-button-icon data-index={index} class="slds-float--right"
+								icon-name="action:delete" onclick={handleRemoveRow}></lightning-button-icon>
+						</td>
+					</tr>
+				</template>
+			</tbody>
+		</table>
+		<br>
+		<lightning-button variant="brand" label="Save" onclick={saveRows} class="slds-align_absolute-center">
+		</lightning-button>
+	</lightning-card>
+</template>

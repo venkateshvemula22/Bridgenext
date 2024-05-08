@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="User details using Wire UI Api as function">
+        <div class="slds-p-around_medium">
+            <template if:true={userdetails}>
+                <p>User Name : {userdetails.Name.value}</p>
+                <p>Username : {userdetails.Username.value}</p>
+            </template>
+        </div>
+    </lightning-card>
+    <lightning-card title="User details using Wire UI Api as property">
+        <div class="slds-p-around_medium">
+            <template if:true={userdetailsprop.data}>
+                <p>User Name : {userdetailsprop.data.fields.Name.value}</p>
+                <p>Username : {userdetailsprop.data.fields.Username.value}</p>
+                <p>Profile : {userdetailsprop.data.fields.Profile.displayValue}</p>
+                
+            </template>
+        </div>
+    </lightning-card>
+</template>

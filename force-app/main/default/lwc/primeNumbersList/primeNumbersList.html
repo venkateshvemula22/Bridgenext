@@ -1,0 +1,13 @@
+<template>
+    <h2></h2>
+    <lightning-card class="slds-m-around_medium" title="Prime Numbers">
+        <lightning-input class="slds-p-around_medium" label= "Start Number" type="number" data-inp="startn"></lightning-input>
+        <lightning-input class="slds-p-around_medium" label= "End Number" type="number" data-inp2="endn"></lightning-input>
+        <lightning-button  class="slds-p-around_large" label = "Submit" variant="brand" slot="actions" onclick={handleClick} disabled={disableOrNot}></lightning-button>
+    
+        <template if:true={primeNumbersList}>
+            <div>Prime Numbers are : <b>{primeNumbersList}</b></div>
+            <div>Prime Numbers Count : <b>{primeNumbers_count}</b></div>
+        </template>
+</lightning-card>
+</template>
