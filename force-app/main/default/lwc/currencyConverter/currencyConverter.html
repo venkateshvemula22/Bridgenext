@@ -1,15 +1,19 @@
 <template>
     <lightning-card title="Currency Converter" icon-name="standard:account">
-        <lightning-input class="slds-m-around_medium" data-inp="fc" label="Enter From" value={fromCurrecy} ></lightning-input>
-        <lightning-input class="slds-m-around_medium" data-inp2="tc" label="Enter To" value={toCurrecy}  ></lightning-input>
-        <lightning-input class="slds-m-around_medium" data-inp3="amt" label="Enter Amount" value={amount}  ></lightning-input>
-        <lightning-button label="Covert"  onclick={handleClick}></lightning-button>
-        <template if:true={amount_converted}>
-            <div>Currency converion for {fromCurrecy} : {amount} to {toCurrecy} is : <b>{amount_converted}</b></div>
-        </template>
-        <template if:true={errormsg}>
-            <div>errormsg : </b></div>
-        </template>
+        <div class="slds-m-around_medium">
+            <lightning-input  data-inp="fc" label="Enter From" value={fromCurrecy} ></lightning-input>
+            <lightning-input  data-inp2="tc" label="Enter To" value={toCurrecy}  ></lightning-input>
+            <lightning-input  data-inp3="amt" label="Enter Amount" value={amount}  ></lightning-input><br>
+            <lightning-button label="Covert"  onclick={handleClick}></lightning-button>
+            <div class="slds-m-top_medium">
+                <template if:true={convertedAmount}>
+                    <div><b>{amount}({fromCurrecy}) ==>   {convertedAmount}({toCurrecy})</b></div>
+                </template>
+                <template if:true={errormsg}>
+                    <div>errormsg : </b></div>
+                </template>
+            </div>
+        </div>
     </lightning-card>
     
 </template>

@@ -7,19 +7,19 @@ export default class CurrencyConverter extends LightningElement {
     @track fromCurrecy;
     @track toCurrecy;
     @track amount;
-    @track amount_converted;
+    @track convertedAmount;
     errormsg;
     
     handleClick(){
         debugger
-        var fc = this.template.querySelector('[data-inp="fc"]').value;
-        var tc = this.template.querySelector('[data-inp2="tc"]').value;
-        var amt = this.template.querySelector('[data-inp3="amt"]').value;
+        this.fromCurrecy = this.template.querySelector('[data-inp="fc"]').value;
+        this.toCurrecy = this.template.querySelector('[data-inp2="tc"]').value;
+        this.amount = this.template.querySelector('[data-inp3="amt"]').value;
 
-        currencyConversion({'fromC' : fc, 'toC' : tc, 'amount' : amt})
+        currencyConversion({'fromC' : this.fromCurrecy, 'toC' : this.toCurrecy, 'amount' : this.amount})
                           .then((response) =>{
                             debugger
-                            this.amount_converted = response.convertedAmount;
+                            this.convertedAmount = response;
                           })
                           .catch((err) => {
                             this.errormsg = err.result.error.info;
