@@ -1,3 +1,11 @@
+/* 
+   @Author : Vemula Venkatesh
+
+   @Description : to get the count of followers of an account.
+
+   @LastModified By : Vemula Venkatesh
+
+*/
 public with sharing class AccountFollowersCount {
     
     @AuraEnabled(cacheable=true)
