@@ -133,7 +133,17 @@ export default class DisplayListOfRecordsLWC extends NavigationMixin(LightningEl
                                                                                                         iconName:'utility:edit',
                                                                                                         variant:'Brand'
                                                                                                     }
-                                })
+                        },
+                        {type: "button", label: 'Delete', initialWidth: 100, typeAttributes: {
+                                                                                                        label: 'Delete',
+                                                                                                        name: 'Delete',
+                                                                                                        title: 'Delete',
+                                                                                                        value: 'Delete',
+                                                                                                        iconPosition: 'left',
+                                                                                                        iconName:'utility:delete',
+                                                                                                        variant:'destructive'
+                                                                                                    }
+                        })
         
         console.log('columns => ', this.columns)
         this.getObjectRecords()
