@@ -1,0 +1,17 @@
+<template>
+    <lightning-card hide-header label="Account Record Picker Card">
+        <p class="slds-var-p-horizontal_small">
+            <lightning-record-picker
+                label="Select Account"
+                placeholder="Type Something..."
+                object-api-name="Account"
+                filter={filter}
+                display-info={displayInfo}
+                matching-info={matchingInfo}
+                required
+                value={recordId}
+                onchange={handleChane}
+            ></lightning-record-picker>
+        </p>
+    </lightning-card>
+</template>
