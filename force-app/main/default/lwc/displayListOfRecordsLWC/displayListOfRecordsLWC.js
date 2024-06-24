@@ -1,19 +1,20 @@
 import { LightningElement, track, wire } from 'lwc'
 import  getObjects from '@salesforce/apex/SobjectRecordsCntrl.getObjects'
 import  getRecords from '@salesforce/apex/SobjectRecordsCntrl.getObjectRecords'
-import  deleteRecord from '@salesforce/apex/SobjectRecordsCntrl.deleteSobjectRecord'
+//import  deleteRecord from '@salesforce/apex/SobjectRecordsCntrl.deleteSobjectRecord'
 //import  getRecords from '@salesforce/apex/SobjectRecordsCntrl.getObjectRecords'
 import Id from '@salesforce/user/Id'
 import {getObjectInfo} from 'lightning/uiObjectInfoApi'
 import { refreshApex } from '@salesforce/apex'
 import { ShowToastEvent } from 'lightning/platformShowToastEvent'
 import { updateRecord } from "lightning/uiRecordApi"
-import {getRecord} from 'lightning/uiRecordApi'
+import {getRecord, deleteRecord } from 'lightning/uiRecordApi'
 import { NavigationMixin } from 'lightning/navigation'
 import { subscribe, unsubscribe, onError } from 'lightning/empApi'
 import NAME_FIELD from '@salesforce/schema/User.Name'
 import USERNAME_FIELD from '@salesforce/schema/User.Username'
 import PROFILE_NAME_FIELD from '@salesforce/schema/User.Profile.Name'
+import LightningConfirm from 'lightning/confirm'
 
 const fields = [NAME_FIELD, USERNAME_FIELD, PROFILE_NAME_FIELD]
 
@@ -287,7 +288,8 @@ export default class DisplayListOfRecordsLWC extends NavigationMixin(LightningEl
             this.handleAction(recId, this.selectedObject, 'edit');
         }
         if (actionName === 'Delete') {
-            this.deleteSobjectRecord(recId, this.selectedObject);
+            //this.deleteSobjectRecord(recId, this.selectedObject);   // for apex delete action
+            this.deleteSobjectRecord(recId)    // for deleteRecord adapter
         }
     }
 
@@ -301,23 +303,43 @@ export default class DisplayListOfRecordsLWC extends NavigationMixin(LightningEl
             }
         })
     }
+    // Delete record using apex class
 
-    deleteSobjectRecord(recordId, objApiName){
+    // deleteSobjectRecord(recordId, objApiName){
 
-        deleteRecord({'recId' : recordId, 'objectName' : objApiName}).then(
-            result => {
-                if(result.includes('Error : ')){
-                    this.showToast('Error', result , 'error')
-                }else {
-                    this.showToast('Success', result, 'success')
-                    this.getObjectRecords()
-                }
+    //     deleteRecord({'recId' : recordId, 'objectName' : objApiName}).then(
+    //         result => {
+    //             if(result.includes('Error : ')){
+    //                 this.showToast('Error', result , 'error')
+    //             }else {
+    //                 this.showToast('Success', result, 'success')
+    //                 this.getObjectRecords()
+    //             }
                 
-            }
-        ).catch(
-            error => {
-                this.showToast('Error', error.body.message, 'error')
-            })
+    //         }
+    //     ).catch(
+    //         error => {
+    //             this.showToast('Error', error.body.message, 'error')
+    //         })
 
+    // }
+
+    // Delete record using uiRecordApi (deleteRecord)
+
+    async deleteSobjectRecord(recordId){
+        const result = await LightningConfirm.open({
+            message: 'Are you sure you want to delete the record?',
+            variant: 'header',
+            label: 'Please Confirm',
+            theme: 'warning',
+        });
+        if(result == true){
+                this.recordDelete(recordId)
+        }
     }
+    async recordDelete(recordId){
+        const res = await deleteRecord(recordId)
+        this.showToast('Success!', 'Record Deleted Successfully.', 'success')
+    }
+
 }
