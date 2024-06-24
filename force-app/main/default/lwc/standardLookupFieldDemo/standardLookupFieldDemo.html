@@ -1,6 +1,6 @@
 <template>
     <lightning-card hide-header label="Account Record Picker Card">
-        <p class="slds-var-p-horizontal_small">
+        <p class="slds-var-p-horizontal_small slds-var-m-right_large input">
             <lightning-record-picker
                 label="Select Account"
                 placeholder="Type Something..."
@@ -13,5 +13,39 @@
                 onchange={handleChane}
             ></lightning-record-picker>
         </p>
+        <div class="slds-var-p-around_medium slds-m-top_medium">
+            <template if:true={accountRecord}>
+                <div class="">
+                    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped">
+                        <thead>
+                            <tr>
+                                <th class="" scope="col">Name</th>
+                                <th class="" scope="col">Owner</th>
+                                <th class="" scope="col">Industry</th>
+                                <th class="" scope="col">Rating</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="slds-cell-wrap">
+                                        <lightning-button label={name} variant="base" onclick={navigateToRecord}></lightning-button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="slds-cell-wrap">{owner}</div>
+                                </td>
+                                <td>
+                                    <div class="slds-cell-wrap">{industry}</div>
+                                </td>
+                                <td>
+                                    <div class="slds-cell-wrap">{rating}</div>
+                                </td>
+                            </tr>                  
+                        </tbody>
+                    </table>
+                </div>
+            </template>
+        </div>
     </lightning-card>
 </template>
