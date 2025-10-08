@@ -1,30 +1,43 @@
-import { LightningElement, track } from 'lwc';
+﻿import { LightningElement } from 'lwc';
 import currencyConversion from '@salesforce/apex/CurrencyLayerIntegration.convertCurrency';
 
+const INPUT_SELECTORS = {
+    from: '[data-inp="fc"]',
+    to: '[data-inp2="tc"]',
+    amount: '[data-inp3="amt"]'
+};
 
 export default class CurrencyConverter extends LightningElement {
-
-    @track fromCurrecy;
-    @track toCurrecy;
-    @track amount;
-    @track convertedAmount;
+    fromCurrecy = '';
+    toCurrecy = '';
+    amount = '';
+    convertedAmount;
     errormsg;
-    
-    handleClick(){
-        debugger
-        this.fromCurrecy = this.template.querySelector('[data-inp="fc"]').value;
-        this.toCurrecy = this.template.querySelector('[data-inp2="tc"]').value;
-        this.amount = this.template.querySelector('[data-inp3="amt"]').value;
 
-        currencyConversion({'fromC' : this.fromCurrecy, 'toC' : this.toCurrecy, 'amount' : this.amount})
-                          .then((response) =>{
-                            debugger
-                            this.convertedAmount = response;
-                          })
-                          .catch((err) => {
-                            this.errormsg = err.result.error.info;
-                          })
+    async handleClick() {
+        const fromInput = this.template.querySelector(INPUT_SELECTORS.from);
+        const toInput = this.template.querySelector(INPUT_SELECTORS.to);
+        const amountInput = this.template.querySelector(INPUT_SELECTORS.amount);
+
+        if (!fromInput || !toInput || !amountInput) {
+            return;
+        }
+
+        this.fromCurrecy = fromInput.value;
+        this.toCurrecy = toInput.value;
+        this.amount = amountInput.value;
+
+        try {
+            this.convertedAmount = await currencyConversion({
+                fromC: this.fromCurrecy,
+                toC: this.toCurrecy,
+                amount: this.amount
+            });
+        } catch (error) {
+            this.errormsg =
+                error?.result?.error?.info || error?.body?.message || error?.message;
+        }
 
         //test
-                 }
+    }
 }
