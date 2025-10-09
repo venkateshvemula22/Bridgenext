@@ -1,0 +1,83 @@
+<template>
+  <lightning-card title="New Account">
+    <lightning-record-edit-form
+      object-api-name="Account"
+      onsuccess={handleSuccess}
+      onsubmit={handleSubmit}
+      onerror={handleError}
+    >
+      <div class="form-wrapper">
+        <lightning-messages></lightning-messages>
+
+        <template if:true={isSubmitting}>
+          <div class="spinner-container">
+            <lightning-spinner
+              alternative-text="Creating account"
+            ></lightning-spinner>
+          </div>
+        </template>
+
+        <div class="form-grid slds-grid slds-wrap slds-gutters_medium">
+          <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2">
+            <lightning-input-field field-name="OwnerId"></lightning-input-field>
+            <lightning-input-field
+              field-name="Name"
+              required
+            ></lightning-input-field>
+            <lightning-input-field
+              field-name="Platform__c"
+            ></lightning-input-field>
+            <lightning-input-field
+              field-name="ParentId"
+            ></lightning-input-field>
+            <lightning-input-field
+              field-name="AccountNumber"
+            ></lightning-input-field>
+            <lightning-input-field field-name="Site"></lightning-input-field>
+            <lightning-input-field field-name="Type"></lightning-input-field>
+            <lightning-input-field
+              field-name="Industry"
+            ></lightning-input-field>
+            <lightning-input-field
+              field-name="AnnualRevenue"
+            ></lightning-input-field>
+            <lightning-input-field
+              field-name="CurrencyIsoCode"
+            ></lightning-input-field>
+          </div>
+
+          <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2">
+            <lightning-input-field field-name="Rating"></lightning-input-field>
+            <lightning-input-field field-name="Phone"></lightning-input-field>
+            <lightning-input-field field-name="Fax"></lightning-input-field>
+            <lightning-input-field field-name="Website"></lightning-input-field>
+            <lightning-input-field
+              field-name="TickerSymbol"
+            ></lightning-input-field>
+            <lightning-input-field
+              field-name="Ownership"
+            ></lightning-input-field>
+            <lightning-input-field
+              field-name="NumberOfEmployees"
+            ></lightning-input-field>
+            <lightning-input-field field-name="Sic"></lightning-input-field>
+          </div>
+        </div>
+
+        <div class="slds-m-top_large slds-text-align_right">
+          <lightning-button
+            type="reset"
+            label="Reset"
+            class="slds-m-right_small"
+          ></lightning-button>
+          <lightning-button
+            type="submit"
+            variant="brand"
+            label="Create Account"
+            class="slds-m-left_x-small"
+          ></lightning-button>
+        </div>
+      </div>
+    </lightning-record-edit-form>
+  </lightning-card>
+</template>
